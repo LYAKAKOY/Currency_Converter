@@ -24,7 +24,7 @@ odd_responses = {
 
 
 @currency_router.get("/rates", response_model=Dict[str, float], responses=odd_responses)
-async def get_rates(from_: Currency = Query(..., description="Исходная валюта", min_length=3, max_length=3),
+async def get_rates(from_: Currency = Query(..., description="Исходная валюта", min_length=3, max_length=3, alias='from'),
                     to: Currency = Query(..., description="Целевая валюта", min_length=3, max_length=3),
                     value: float = Query(..., description="Сумма для конвертации", gt=0)) -> Dict[str, float]:
     result = await convert_currency(from_, to, value)
