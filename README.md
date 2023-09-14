@@ -10,11 +10,15 @@ FastApi
 ```bash
 git clone https://github.com/LYAKAKOY/Currency_Converter
 ```
-2. Собрать docker образ
+2. Перейти в папку Currency_Converter
+```bash
+cd Currency_Converter 
+```
+3. Собрать docker образ
 ```bash
 docker build . -t 'currency_converter' 
 ```
-3. Запустить docker образ
+4. Запустить docker образ
 ```bash
 docker run -p 8000:8000 currency_converter
 ```
