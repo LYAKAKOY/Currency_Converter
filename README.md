@@ -19,7 +19,7 @@ docker build . -t 'currency_converter'
 ```
 4. Запустить docker образ
 ```bash
-docker run -p 8000:8000 currency_converter
+docker run --rm -p 8000:8000 currency_converter
 ```
 ## Documentation
 После запуска будет доступна
